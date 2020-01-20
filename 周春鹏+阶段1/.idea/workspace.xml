@@ -46,7 +46,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1WQQNEmx2Ylz7sVQJX8r7F2U3Ta" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -57,7 +61,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/周春鹏+阶段1" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -96,9 +101,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\reno\Documents\GitHub\SEU-SE-2020\周春鹏+阶段1\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doc/data" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -192,6 +197,14 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Flask server.Train" />
+      <item itemvalue="Python.11" />
+      <item itemvalue="Python.process_station_name" />
+      <item itemvalue="Python.process_train_list" />
+      <item itemvalue="Python.train_line" />
+      <item itemvalue="Python.train_line (1)" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.process_station_name" />
@@ -235,6 +248,11 @@
       <workItem from="1579438938635" duration="2509000" />
       <workItem from="1579441463605" duration="18370000" />
       <workItem from="1579493937540" duration="15226000" />
+      <workItem from="1579515317246" duration="95000" />
+      <workItem from="1579515439639" duration="275000" />
+      <workItem from="1579516046296" duration="53000" />
+      <workItem from="1579516159153" duration="157000" />
+      <workItem from="1579520862972" duration="6809000" />
     </task>
     <servers />
   </component>
@@ -246,18 +264,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="72" y="182" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1579360340780" />
-    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579361845379">
+    <state x="552" y="179" key="#Notifications" timestamp="1579515688483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579361845379" />
+    <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1579515688483" />
+    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579515519738">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579515519738" />
     <state x="210" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579449812224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="210" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579449812224" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1579355195187">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1579515712578">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579355195187" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579515712578" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1579432184848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -274,14 +296,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579432184848" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1579516313319">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579516313319" />
     <state x="844" y="402" width="343" height="239" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1579425517340">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="844" y="402" width="343" height="239" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1579425517340" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1579493938358">
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1579520863204">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579493938358" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579520863204" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579508185950">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
