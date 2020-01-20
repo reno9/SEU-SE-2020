@@ -6,39 +6,46 @@
 
 {% block content %}
     <div class="container">
-    <table class="table table-striped">
-        <div class="panel panel-default">
-            <!-- Default panel contents -->
-            <div class="panel-heading" align="center"><h2>火车票查询结果</h2></div>
-            <div class="panel-body">
-                <p>...</p>
-            </div>
 
-            <!-- Table -->
-            <table class="table">
-                <tr>
-                    <th>列车类型</th>
-                    <th>列车车次</th>
-                    <th>出发地</th>
-                    <th>目的地</th>
-                    <th>出发时间</th>
-                    <th>到达时间</th>
-                </tr>
-                {% for line in info_list %}
+        <table class="table table-striped">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading" align="center"><h2>火车线路查询结果</h2></div>
+                <div class="panel-body">
+                    <p class="text-left">
+                        查询的从<strong>{{ query_stations[0] }}</strong>到<strong>{{ query_stations[1] }}</strong>的火车线路有:
+                    </p>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-bordered">
                     <tr>
+                        <th>列车类型</th>
+                        <th>列车车次</th>
+                        <th>出发地</th>
+                        <th>目的地</th>
+                        <th>出发时间</th>
+                        <th>到达时间</th>
+                    </tr>
+                    {% for line in info_list %}
+                        <tr>
                             <td>{{ line[0] }}</td>
-                            <td href="{{ url_for('blue.index') }}" class="button" role="button" >{{ line[1] }}</td>
+                            <td href="{{ url_for('blue.index') }}" class="button" role="button">{{ line[1] }}</td>
                             <td>{{ line[2] }}</td>
                             <td>{{ line[3] }}</td>
                             <td>{{ line[4] }}</td>
                             <td>{{ line[5] }}</td>
-                    </tr>
-                {% endfor %}
-            </table>
-        </div>
-    </table>
-
-    <a href="{{ url_for('blue.index') }}" class="btn btn-primary btn-lg active" role="button"  >重新查询</a>
-
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </table>
     </div>
+    <div class="container">
+        <a href="{{ url_for('blue.index') }}" class="btn btn-primary btn-lg " role="button" align="center">重新查询</a>
+    </div>
+
+
+
+
 {% endblock %}
