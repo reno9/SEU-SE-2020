@@ -32,9 +32,10 @@ def train_query():
             station_arrive = TrainTimeTable.query.filter(TrainTimeTable.train_num == list_num).filter(TrainTimeTable.station_name.contains(add_arrive)).first()
             access_train = [train_type, list_num, station_depart.station_name, station_arrive.station_name, station_depart.time_depart, station_arrive.time_arrive]
             info_list.append(access_train)
+        query_stations = [add_depart, add_arrive]
         print(info_list)
 
-        return render_template('query.html', info_list=info_list )
+        return render_template('query.html', info_list=info_list, query_stations=query_stations)
 
 
 
