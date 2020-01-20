@@ -1,2 +1,1 @@
-# TicketQuery
-实训作业
+实训项目
