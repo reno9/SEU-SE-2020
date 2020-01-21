@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<body bgcolor="DodgerBlue">
+        <div style="text-align:center">
+        <font></font><br/><font></font><br/><font></font><br/>
+        <font face="宋体" size="+4" color="#F0F8FF">12306火车票查询</font><br/>
+        <font></font><br/>
+        <font></font><br/>
+        <form action ='/login' method='post'>
+            <input type="txt"  rows="2" cols="60" placeholder="账户名"
+            name='username' style="height:40px;width:200px;">
+
+            <input type="password"  rows="2" cols="60" placeholder="账户密码"
+            name='password' style="height:40px;width:200px;">
+
+            <button type="submit" class="search-submit"
+            style="height:42px;width:70px;">登陆</button>
+        </form>
+            {% for message in get_flashed_messages() %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+
+</body>
+</html>
