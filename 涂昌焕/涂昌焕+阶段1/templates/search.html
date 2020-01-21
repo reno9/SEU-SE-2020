@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+
+    <body bgcolor="DodgerBlue">
+        <img style="position:absolute;margin-left:0px" src="12306.gif" width="200px" height="200px" />
+        <div style="text-align:center">
+
+        <font></font><br/><font></font><br/><font></font><br/>
+        <font face="宋体" size="+4" color="#F0F8FF">12306火车票查询</font><br/>
+        <font></font><br/>
+        <font></font><br/>
+        <form action ='/search' method='post'>
+            <input type="txt"  rows="2" cols="60" placeholder="出发点"
+            name='start' style="height:40px;width:100px;">
+
+            <input type="txt"  rows="2" cols="60" placeholder="目标点"
+            name='target' style="height:40px;width:100px;">
+
+            <input type="txt"  rows="2" cols="60" placeholder="出发日期Y/M/D"
+            name='date' style="height:40px;width:100px;">
+            <button type="submit" class="search-submit"
+            style="height:42px;width:70px;">查询</button>
+        </form>
+        </div>
+
+</body>
+</html>
