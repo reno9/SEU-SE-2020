@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>车票查询系统</title>
+    <style>
+    html, body, h1, form, fieldset, legend, ol ,li{
+        padding:0;
+        margin:0;
+    }
+    ol{
+        list-style:none;
+    }
+    body{
+        background:#fff;
+        color:#111;
+        padding:20px;
+    }
+    form#payment{
+        background:#9cbc2c;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+        padding:20px;
+        width:400px;
+    }
+    form#payment fieldset{
+        border:none;
+        margin-bottom:10px;
+    }
+    form#payment fieldset:last-of-type{ margin-bottom:0; }
+    form#payment legend{
+        color:#384313;
+        font-size:16px;
+        font-weight:bold;
+        padding-bottom:10px;
+        text-shadow:0px 1px 1px #c0d576;
+    }
+    form#payment > fieldset>legend:before{
+
+        counter-increment:fieldsets;
+    }
+    form#payment fieldset fieldset legend{
+        color:#111;
+        font-size:13px;
+        font-weight:normal;
+        padding-bottom:0;
+    }
+    form#payment ol li{
+        background:#b9cf6a;
+        background:rgba(255, 255, 255, 0.3);
+        border:#e3ebc3;
+        border-color:rgba(255, 255, 255, 0.6);
+        border-style:solid;
+        border-width:2px;
+        -webkit-border-radius:5px;
+        line-height:30px;
+        padding:5px 10px;
+        margin-bottom:2px;
+    }
+    form#payment ol ol li{
+        bakcground:none;
+        border:none;
+        float:left;
+    }
+    form#payment label{
+        float:left;
+        font-size:13px;
+        width:110px;
+    }
+    form#payment fieldset fieldset label{
+        background:none no-repeat left 50%;
+        line-height:20px;
+        padding:0 0 0 30px;
+        width:auto;
+    }
+    form#payment fieldset fieldset label:hover{cursor:pointer;}
+    form#payment input:not([type=radio]), form#payment textarea{
+        background:#fff;
+        border:#fc3 solid 1px;
+        -webkit-border-radius:3px;
+        outline:none;
+        padding:5px;
+    }
+    </style>
+</head>
+<body>
+<form id=payment method="post">
+    <fieldset>
+        <legend>12306车票查询</legend>
+        <ol>
+            <li>
+                <label for="name">出发地点：</label>
+                <input type="text" id="name" name="local" placeholder="请输入车站名" required autofocus>
+            </li>
+            <li>
+                <label for="email">目的地点：</label>
+               <input type="text" id="name" name="destination" placeholder="请输入车站名称" required autofocus>
+            </li>
+            <li>
+                <label for="email">查询时间：</label>
+               <input type="text" id="name" name="times" placeholder="2020-02-03" required autofocus>
+            </li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <button type="submit">查询</button>
+    </fieldset>
+</form>
+</body>
+</html>

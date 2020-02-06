@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>火车票查询系统</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<style type="text/css">
+
+
+body {
+ font: normal 11px auto;
+ color: #4f6b72;
+ background: #E6EAE9;
+}
+
+a {
+ color: #c75f3e;
+}
+
+#mytable {
+ width: 700px;
+ padding: 0;
+ margin: 0;
+}
+
+caption {
+ padding: 0 0 5px 0;
+ width: 700px;
+ font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ text-align: right;
+}
+
+th {
+ font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ color: #4f6b72;
+ border-right: 1px solid #C1DAD7;
+ border-bottom: 1px solid #C1DAD7;
+ border-top: 1px solid #C1DAD7;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ text-align: left;
+ padding: 6px 6px 6px 12px;
+ background: #CAE8EA;
+}
+
+th.nobg {
+ border-top: 0;
+ border-left: 0;
+ border-right: 1px solid #C1DAD7;
+ background: none;
+}
+
+td {
+ border-right: 1px solid #C1DAD7;
+ border-bottom: 1px solid #C1DAD7;
+ background: #fff;
+ font-size:11px;
+ padding: 6px 6px 6px 12px;
+ color: #4f6b72;
+}
+
+
+td.alt {
+ background: #F5FAFA;
+ color: #797268;
+}
+
+th.spec {
+ border-left: 1px solid #C1DAD7;
+ border-top: 0;
+ background: #fff;
+ font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+ border-left: 1px solid #C1DAD7;
+ border-top: 0;
+ background: #f5fafa;
+ font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ color: #797268;
+}
+
+html>body td{ font-size:11px;}
+</style>
+<body>
+<table id="mytable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series">
+<caption> </caption>
+  <tr>
+    <th scope="col" abbr="Configurations" class="nobg">车次名称</th>
+    <th scope="col" abbr="Dual 1.8">出发站</th>
+    <th scope="col" abbr="Dual 2">终点站</th>
+    <th scope="col" abbr="Dual 2.5">出发时间</th>
+    <th scope="col" abbr="Dual 2.5">到达时间</th>
+    <th scope="col" abbr="Dual 2.5">总耗时</th>
+    <th scope="col" abbr="Dual 2.5">一等座</th>
+    <th scope="col" abbr="Dual 2.5">二等座</th>
+    <th scope="col" abbr="Dual 2.5">软卧</th>
+    <th scope="col" abbr="Dual 2.5">硬卧</th>
+    <th scope="col" abbr="Dual 2.5">硬座</th>
+    <th scope="col" abbr="Dual 2.5">无座</th>
+  </tr>
+    {% for info in info_list %}
+
+        <tr>
+            <th scope="row" abbr="Model" class="spec">{{ info.ccmc }}</th>
+            <td>{{ info.cfz }}</td>
+            <td>{{ info.zdz }}</td>
+            <td>{{ info.cfsj }}</td>
+            <td>{{ info.ddsj }}</td>
+            <td>{{ info.zhs }}</td>
+            <td>{{ info.ydz }}</td>
+            <td>{{ info.edz }}</td>
+            <td>{{ info.rw }}</td>
+            <td>{{ info.yw }}</td>
+            <td>{{ info.yz }}</td>
+            <td>{{ info.wz }}</td>
+        </tr>
+    {% endfor %}
+
+
+
+
+</table>
+
+</body>
+</html>
