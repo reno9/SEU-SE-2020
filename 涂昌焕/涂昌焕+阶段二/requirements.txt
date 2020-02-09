@@ -1,0 +1,5 @@
+requests==2.22.0
+urllib3==1.25.8
+Flask==1.1.1
+flask_bootstrap==3.3.7.1
+pymysql==0.9.3
