@@ -20,7 +20,7 @@ class BaseModel(db.Model):
             return False
 
 class TrainLine(BaseModel):
-    train_type = db.Column(db.String(4))
+    train_type = db.Column(db.String(8))
     train_num = db.Column(db.String(16), unique=True, primary_key=True)
     station_depart = db.Column(db.String(64))
     station_arrive = db.Column(db.String(64))
