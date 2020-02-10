@@ -1,0 +1,39 @@
+{% extends "bootstrap/base.html" %}
+
+{% block header %}
+    <meta charset="UTF-8">
+{% endblock %}
+
+
+{% block title %}火车票查询首页{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <div class="main-title-wrap-en">
+                    <h2 class="main-title">火车线路查询系统</h2>
+                    <p class="main-subtitle">目前仅支持G1,G2,G152路线</p>
+                </div>
+                <form class="form-inline" action="{{ url_for('blue.train_query') }}" method="post">
+                    <div class="form-control mb-2 mr-sm-2 origin">
+                        <span>日期: </span><input type="date" name="date" placeholder="">
+                    </div>
+                    <div class="form-control mb-2 mr-sm-2 origin">
+                        <span>出发地: </span><input type="text" name="add_depart" placeholder="在此输入" required="True">
+                    </div>
+                    <div class="form-control mb-2 mr-sm-2 destination">
+                        <span>目的地: </span><input type="text" name="add_arrive" placeholder="在此输入" required="True">
+                    </div>
+                    <div class="btn">
+                        <button type="submit">查询</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
