@@ -43,22 +43,11 @@ def train_query():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 @blue.route('/addtrain/')
 def add_train():
     line = TrainLine()
 
-    line.train_type = "G"
+    line.train_type = "高铁"
     line.train_num = "G1"
     line.station_depart = "北京南"
     line.station_arrive = "上海虹桥"
