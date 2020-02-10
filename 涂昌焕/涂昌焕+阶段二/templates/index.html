@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}查询结果{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    <tr>
+        <th>车次</th>
+        <th>出发站</th>
+        <th>目标站</th>
+        <th>出发时间</th>
+        <th>到达时间</th>
+        <th>历时</th>
+        <th>特等座</th>
+        <th>一等</th>
+        <th>二等</th>
+        <th>高级软卧</th>
+        <th>软卧</th>
+        <th>动卧</th>
+        <th>硬卧</th>
+        <th>硬座</th>
+        <th>无座</th>
+        <th>备注</th>
+    </tr>
+        {% for i in u %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+                <td>{{ i[4] }}</td>
+                <td>{{ i[5] }}</td>
+                <td>{{ i[6] }}</td>
+                <td>{{ i[7] }}</td>
+                <td>{{ i[8] }}</td>
+                <td>{{ i[9] }}</td>
+                <td>{{ i[10] }}</td>
+                <td>{{ i[11] }}</td>
+                <td>{{ i[12] }}</td>
+                <td>{{ i[13] }}</td>
+                <td>{{ i[14] }}</td>
+                <td>{{ i[15] }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}

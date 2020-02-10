@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $('#date').datepicker({
+            weekStart: 1,
+            autoclose: true,
+            daysOfWeekHighlighted: "0,6",
+            format: "yyyy-mm-dd",
+            language: "zh-CN"
+        });
+    </script>
+{% endblock %}
+{% block styles %}
+    {{ super() }}
+    <style type="text/css">
+        .table-hover > tbody > tr:hover {
+            background-color: #f80;
+        }
+
+        tr > th, tr > td {
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}车票查询{% endblock %}
+{% block page_content %}
+<div class="container">
+    <div class="row">
+        {{ wtf.quick_form(form) }}
+    </div>
+    <hr>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>车次</th>
+            <th>出发站</th>
+            <th>出发时间</th>
+            <th>到达站</th>
+            <th>到达时间</th>
+            <th>日期</th>
+        </tr>
+        </thead>
+        {% if data_list %}
+            <tbody>
+            {% for line_info in data_list %}
+                <tr>
+                    <td>{{ loop.index}}</td>
+                    <td>{{ line_info.id }}</td>
+                    <td>{{ line_info.from_station }}</td>
+                    <td>{{ line_info.start_time }}</td>
+                    <td>{{ line_info.to_station }}</td>
+                    <td>{{ line_info.arrive_time }}</td>
+                    <td>{{ line_info.date }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        {% endif %}
+    </table>
+</div>
+<p>本地时间为:{{ moment(current_time).format('LLL') }}.</p>
+<p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+{% endblock %}
