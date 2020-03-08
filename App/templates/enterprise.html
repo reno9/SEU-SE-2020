@@ -1,0 +1,159 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <title>专家发现系统</title>
+    <link rel="stylesheet" type="text/css" href="/static/Assets/css/reset.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="/static/Assets/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/static/Assets/js/js_z.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/Assets/css/thems.css?v=12341567">
+    <link rel="stylesheet" type="text/css" href="/static/Assets/css/responsive.css">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+    <div class="head clearfix">
+        <div class="logo"><a href="" style="text-align: center;font-size: 30px;color: white">专家发现系统</a></div>
+        <div class="head_r clearfix">
+            <div class="search">
+                <input name="" type="text">
+                <input name="" type="submit" value="">
+            </div>
+            <div class="nav_m">
+                <div class="n_icon">导航栏</div>
+                <ul class="nav clearfix">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="news.html">新闻中心</a></li>
+                    <li class="er"><a href="service.html">核心业务</a></li>
+                    <li class="now"><a href="join.html">合作伙伴</a></li>
+                    <li><a href="customer.html">客户中心</a></li>
+                    <li><a href="attrct.html">招商中心</a></li>
+                    <li><a href="invite.html">加入我们</a></li>
+                    <li><a href="">论坛社区</a></li>
+                </ul>
+                <div class="er_m">
+                    <div class="hx">
+                        <i>&nbsp;</i>
+                        <div class="b_head">
+                            核心业务<em>Core business</em>
+                        </div>
+                        <div class="hx_m clearfix">
+                            <ul class="hx_ml">
+                                <li><a href="">孵化器</a></li>
+                                <li><a href="">智造联盟</a></li>
+                                <li><a href="">创客公寓</a></li>
+                                <li><a href="">商业街</a></li>
+                                <li><a href="">商务办公</a></li>
+                                <li><a href="">电子商务</a></li>
+                            </ul>
+                            <div class="hx_mr"><img src="/static/Assets/upload/pic3.jpg" alt=""/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--头部-->
+<div class="scd clearfix" style="background-color:whitesmoke;margin-top: 50px">
+    <div class="scd" style="background-color: inherit; ">
+        <div class="enimg">
+        </div>
+        <div class="eninfo">
+            <h1>{{ en_data.en_name }}</h1>
+            <p>地址：{{ en_data.en_address }}</p>
+            <p>电话：{{ en_data.en_telephone }}</p>
+            <p>所属行业：{{ en_data.en_industry }}</p>
+            <p>经营范围：{{ en_data.en_scope }}</p>
+
+        </div>
+    </div>
+</div>
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+    <div class="scd_top">
+        <div class="s_nav">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="#engineer" class="active" role="tab"
+                                           data-toggle="tab"><span>工程师</span></a></li>
+                <li role="presentation"><a href="#patent" role="tab" data-toggle="tab"><span>专利发明</span></a></li>
+                <li role="presentation"><a href="#scholar" role="tab" data-toggle="tab"><span>推荐教授</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="join clearfix">
+        <dl class="join_a clearfix">
+            <div class="tab-content" style="min-height:500px">
+                <div class="tab-pane active" id="engineer">
+                    <div class="join clearfix">
+                        <ul class="attrct">
+                            {% for engineer in en_data.enterprise_engineer %}
+                                <li>
+                                    <div class="name ">
+                                        <a href="">{{ engineer.engineer_name }}</a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane" id="patent">
+                    <div class="join clearfix">
+                        <ul class="attrct">
+                            {% for patent in en_data.enterprise_patent %}
+                                <li>
+                                    <div class="name ">
+                                        <a href="">{{ patent.patent_name }}</a>
+                                    </div>
+                                    <div class="des">
+                                        <p>专利号：{{ patent.pa_abstract }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane" id="scholar">
+                    <div class="join clearfix">
+                        <ul class="attrct">
+                            {% for scholar in en_data.expert_list %}
+                                <li>
+                                    <div class="name bc2">
+                                        <a href="">{{ scholar.teacher_name }}</a>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </dl>
+        <div class="space_hx">&nbsp;</div>
+        <ul class="join_b clearfix">
+        </ul>
+    </div>
+</div>
+</div>
+<div class="bq">Copyright © 2020 专家搜索系统</div>
+</body>
+</html>
